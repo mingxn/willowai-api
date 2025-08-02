@@ -2,3 +2,12 @@ fastapi
 uvicorn[standard]
 sqlalchemy
 psycopg2-binary
+python-multipart
+minio
+openai
+pydantic-settings
+python-dotenv
+chromadb
+agno
+duckduckgo-search
+packaging

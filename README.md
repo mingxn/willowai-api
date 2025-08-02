@@ -2,30 +2,33 @@
 
 This is the server for the Willow.ai application, built with FastAPI.
 
+## AI Models
+
+The application utilizes the `GPT-4o-mini` model for its AI-powered diagnosis features.
+
 ## Local Setup
 
 1.  **Prerequisites:**
     *   Python 3.9+
     *   PostgreSQL
-    *   [uv](https://github.com/astral-sh/uv) (a fast Python package installer and resolver)
 
 2.  **Installation:**
 
     *   Clone the repository.
-    *   Create and activate a virtual environment using `uv`:
+    *   Create and activate a virtual environment:
         ```bash
-        uv venv
+        python3 -m venv .venv
         source .venv/bin/activate
         ```
-    *   Install the required dependencies using `uv`:
+    *   Install the required dependencies:
         ```bash
-        uv pip install -r requirements/base.txt
+        pip install -r requirements/base.txt
         ```
 
 3.  **Database Setup:**
 
     *   Create a PostgreSQL database named `willow`.
-    *   Create a `.env` file in the `server` directory and add the following line, replacing the credentials with your own:
+    *   Create a `.env` file in the root directory and add the following line, replacing the credentials with your own:
         ```
         DATABASE_URL=postgresql://user:password@localhost/willow
         ```
@@ -33,7 +36,7 @@ This is the server for the Willow.ai application, built with FastAPI.
 4.  **Running the Application:**
 
     ```bash
-    uvicorn src.main:app --reload --app-dir server
+    uvicorn src.main:app --reload
     ```
 
     The application will be available at `http://127.0.0.1:8000`.
