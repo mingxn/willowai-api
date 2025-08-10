@@ -26,12 +26,15 @@ async def diagnose_plant(file: UploadFile) -> DiagnosisResponse:
     raw_output = diagnosis_workflow(file_content)
     parsed_output = json.loads(raw_output)
 
-    diagnosis_list = parsed_output.get("diagnoses", [])
+    plant_name = parsed_output.get("plant_name", "Unknown Plant")
+    condition = parsed_output.get("condition", "Unknown Condition")
+    detail_diagnosis = parsed_output.get("detail_diagnosis", "No detailed diagnosis found.")
     action_plan_list = parsed_output.get("action_plan", [])
 
-    # Format for DiagnosisResponse schema
     return DiagnosisResponse(
-        diagnoses=diagnosis_list,
+        plant_name=plant_name,
+        condition=condition,
+        detail_diagnosis=detail_diagnosis,
         action_plan=action_plan_list
     )
 

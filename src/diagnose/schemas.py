@@ -4,14 +4,12 @@ from typing import List
 class DiagnosisRequest(BaseModel):
     pass
 
-class DiagnosisItem(BaseModel):
-    id: int
-    diagnosis: str
-
 class ActionPlanItem(BaseModel):
     id: int
     action: str
 
 class DiagnosisResponse(BaseModel):
-    diagnoses: List[DiagnosisItem]
+    plant_name: str
+    condition: str
+    detail_diagnosis: str
     action_plan: List[ActionPlanItem]

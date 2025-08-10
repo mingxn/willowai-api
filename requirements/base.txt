@@ -7,7 +7,7 @@ minio
 openai
 pydantic-settings
 python-dotenv
-chromadb
+pinecone
 agno
 duckduckgo-search
 packaging
