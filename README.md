@@ -39,6 +39,16 @@ The application utilizes the `GPT-4o-mini` model for its AI-powered diagnosis fe
         *   Set your Pinecone API key: `PINECONE_API_KEY=your_pinecone_api_key_here`
         *   Configure Pinecone environment if different from default: `PINECONE_ENVIRONMENT=us-east-1-aws`
 
+
+4.  **Initialize Data Source**
+
+    The source of trust data is partial of the [PlantDoc Dataset](https://github.com/pratikkayal/PlantDoc-Dataset), piped to `data/` folder which is ingested into the vector store using the `data/load.py` script. This dataset contains labeled plant disease images that serve as the knowledge base for plant diagnosis.
+
+    To load the training data into your Pinecone vector store:
+    ```bash
+    python data/load.py
+    ```
+
 4.  **Running the Application:**
 
     ```bash
