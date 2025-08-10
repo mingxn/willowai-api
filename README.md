@@ -81,7 +81,7 @@ graph TD
 ## Data Sources
 
 ### Training Data
-The source of trust data is partial of the [PlantDoc Dataset](https://github.com/pratikkayal/PlantDoc-Dataset), which is ingested into the vector store using the `data/load.py` script. This dataset contains labeled plant disease images that serve as the knowledge base for plant diagnosis.
+The source of trust data is partial of the [PlantDoc Dataset](https://github.com/pratikkayal/PlantDoc-Dataset), piped to `data/` folder which is ingested into the vector store using the `data/load.py` script. This dataset contains labeled plant disease images that serve as the knowledge base for plant diagnosis.
 
 To load the training data into your Pinecone vector store:
 ```bash
